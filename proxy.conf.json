@@ -1,0 +1,17 @@
+{
+  "/v1": {
+    "target": "http://192.168.101.62:8888",
+    "secure": false
+  },
+  "/rest": {
+    "target": "http://192.168.55.115:9000/",
+    "secure": false
+  },
+  "/v2": {
+    "target": "http://192.168.55.119:30002",
+    "secure": false,
+    "pathRewrite": {
+      "^/v2": "/"
+    }
+  }
+}

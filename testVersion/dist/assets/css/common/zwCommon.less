@@ -1,0 +1,256 @@
+.zwTable {
+ border: 1px solid @borderColor;
+ width: 100%;
+ border-left: none;
+ border-bottom: none;
+ border-collapse: collapse;
+ background: @white;
+ .ant-table-thead > tr > th, .ant-table-tbody > tr > td{
+   padding: 0 8px !important;
+ }
+ td, th {
+  
+ }
+ th {
+  text-align: center;
+  height: 50px;
+  font-weight: bold;
+  background: @white;
+ }
+ tr:nth-child(even){
+   background: #F9FAFC;
+ }
+ td {
+  padding: 6px;
+  height: 40px;
+  border-bottom:none!important;
+ }
+}
+
+.zwSearch {
+ clear: both;
+ padding-bottom: 20px;
+ &:after {
+  content: " ";
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  display: block;
+  clear: both
+ }
+ .right {
+  float: right;
+ }
+}
+
+.viewBox {
+ width: 1200px;
+ margin: 0 auto;
+ color: @textColor;
+ .viewMain {
+  padding: 10px;
+  background: @white;
+  border-radius: 6px;
+  min-height: 500px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+ }
+}
+
+body {
+  /deep/.ant-spin-nested-loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+ .noData {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 16px;
+  color: #999;
+  position: absolute;
+  background: #fff;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  padding-top: 100px;
+  span {
+   position: absolute;
+   display: block;
+   top: 50%;
+   left: 50%;
+   margin-left: -19px;
+   margin-top: -9px;
+  }
+ }
+
+
+ // 按钮圆角自定义
+ .zwCrBtn {
+  padding: 0 20px !important;
+  border-radius: 20px;
+  &:hover{
+    background:@color1;
+    color: @white;
+    border-color: @color1;
+  }
+ }
+ .zwButtonGroup{
+   .ant-btn{ border-color: @color1; color: @color1;
+    background: none;
+    &:hover{
+      background:@color1;
+      color: @white;
+      border-color: @color1;
+    }
+    &[disabled]{
+      background: #f7f7f7;
+      color: #d9d9d9;
+      //border-color: #d9d9d9;
+    }
+  }
+   .ant-btn:first-child{
+     border-radius: 100px 0 0 100px;
+   }
+   .ant-btn:last-child{
+      border-radius: 0 100px 100px 0;
+    }
+ }
+ .ant-btn-default {
+  border-color: @color1;
+  color: @color1;
+ }
+ .ant-radio-button-wrapper {
+  border-color: @color1;
+  color: @color1;
+ }
+ .ant-radio-button-wrapper:first-child {
+  border-radius: 20px 0 0 20px;
+  border-left: 1px solid @color1;
+ }
+ .ant-radio-button-wrapper:last-child {
+  border-radius: 0 20px 20px 0;
+ }
+ .ant-radio-button-wrapper:not(:first-child)::before {
+  background: @color1;
+ }
+ .ant-radio-button-wrapper-checked {
+  background: @color1;
+  color: @white;
+ }
+}
+
+.pageBox {
+ text-align: right;
+ padding: 10px 0;
+}
+
+.addFrom {
+ width: 500px;
+ margin: 0 auto;
+ > div {
+  display: block;
+  margin: 10px 0;
+
+ }
+}
+
+.ant-dropdown-menu {
+ li {
+  min-width: 150px;
+  height: 36px;
+  &:hover, &.ant-dropdown-menu-item-selected {
+   color: @white;
+   background: @color2;
+  }
+ }
+}
+
+.modal-no-padding {
+ /deep/ .ant-modal-body {
+  padding: 0;
+ }
+}
+
+nz-modal {
+ .ant-modal-title {
+  font-size: 18px !important;
+ }
+}
+
+.cdk-overlay-container, .cdk-overlay-pane {
+ z-index: 10001 !important;
+}
+
+nz-tag {
+ .ant-tag {
+  border-radius: 20px;
+  padding: 0 10px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+ }
+}
+
+.ant-breadcrumb-link, .ant-breadcrumb-separator {
+ max-width: 100px;
+ height: 20px;
+ overflow: hidden;
+ display: inline-block;
+ text-overflow: ellipsis;
+ white-space: nowrap;
+ vertical-align: middle;
+}
+
+.zwModalBox {
+ .ant-modal-mask {
+  background: none;
+  display: none;
+ }
+ .ant-modal-close {
+  display: none;
+ }
+ .ant-modal {
+  position: absolute;
+  padding: 0;
+  z-index: 800;
+  overflow-y: auto;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+ }
+ .ant-modal-wrap {
+  position: static;
+ }
+}
+nz-pagination{ display: inline;
+  ul{ display: inline;}
+}
+.ant-pagination-jump-prev:after, .ant-pagination-jump-next:after{
+  display: inline !important;
+}
+.ant-breadcrumb > nz-breadcrumb-item:last-child{ color:#999!important;
+  font-weight: normal !important;
+}
+.stateIcon.icon-status-yibaocun{color: #b4b4b4;}
+.stateIcon.icon-status-yunhangzhong{color: rgb(55,145,255);}
+.stateIcon.icon-status-yunhangchenggong{color: #25b363;}
+.stateIcon.icon-status-zhongduan{color: #f26e01;}
+.stateIcon.icon-status-shibai{color: #ed2e2f;}
+.stateIcon.icon-status-zanting{color: rgb(246,206,36);}
+
+.tagB{ color: @white; font-size: 10px; height: 20px; border-radius: 12px;
+  padding: 0 10px; line-height: 20px; display: inline-block;
+  &::before{ display: none;}
+}
+.tagB.icon-status-yibaocun{background: #b4b4b4;}
+.tagB.icon-status-yunhangzhong{background: rgb(55,145,255);}
+.tagB.icon-status-yunhangchenggong{background: #25b363;}
+.tagB.icon-status-zhongduan{background: #f26e01;}
+.tagB.icon-status-shibai{background: #ed2e2f;}
+.tagB.icon-status-zanting{background: rgb(246,206,36);}
+
+.crumb-box{ padding: 15px 0; position: absolute;
+  top:0; width: 100%;
+  /deep/a{color: #7D7F85;}
+}

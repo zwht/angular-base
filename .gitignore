@@ -1,0 +1,11 @@
+.DS_Store
+.project
+.vscode
+node_modules/
+/dist/
+/dist.tar
+.idea/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+nohup.out
