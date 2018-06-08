@@ -1,4 +1,39 @@
 <div class="loginCmp">
-    logo
-    <a href="/#/admin/tool/code" nz-button nzType="primary">go</a>
+    <div class="login-box">
+        <div class="title">
+            <h1>西昌市微反腐平台</h1>
+            <span>XICHANG MICRO ANTI-CORRUPTION PLATFORM</span>
+        </div>
+        <div class="form">
+            <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+                <nz-form-item>
+                    <nz-form-control>
+                        <nz-input-group nzPrefixIcon="anticon anticon-user">
+                            <input type="text" nz-input formControlName="userName" placeholder="请输入账号!">
+                        </nz-input-group>
+                        <nz-form-explain *ngIf="validateForm.get('userName').dirty && validateForm.get('userName').errors">请输入账号!</nz-form-explain>
+                    </nz-form-control>
+                </nz-form-item>
+                <nz-form-item>
+                    <nz-form-control>
+                        <nz-input-group nzPrefixIcon="anticon anticon-lock">
+                            <input type="password" nz-input formControlName="password" placeholder="请输入密码！">
+                        </nz-input-group>
+                        <nz-form-explain *ngIf="validateForm.get('password').dirty && validateForm.get('password').errors">请输入密码！</nz-form-explain>
+                    </nz-form-control>
+                </nz-form-item>
+                <nz-form-item>
+                    <nz-form-control>
+                        <!--<label nz-checkbox formControlName="remember">
+                            <span>Remember me</span>
+                        </label>
+                        <a class="login-form-forgot" class="login-form-forgot">Forgot password</a>-->
+                        <button nz-button class="login-form-button" [nzType]="'primary'">登陆</button>
+                        <!-- Or
+                         <a href="">register now!</a>-->
+                    </nz-form-control>
+                </nz-form-item>
+            </form>
+        </div>
+    </div>
 </div>

@@ -83,6 +83,7 @@ export class MenuComponent implements OnInit {
                 this.menu.push(itemMenu);
                 return true;
             }
+            return true;
         });
         console.log(this.menu);
         this.setActiveMenu(this.router.url, '/admin/');
